@@ -35,9 +35,9 @@ def incoming_sms():
 
     # Determine the right reply for this message
     if body == 'hello':
-        resp.message("Hi!")
+        resp.message("Hi! How are you?")
     elif body == 'bye':
-        resp.message("Goodbye")
+        resp.message("Goodbye! Have a nice day.")
 
     return str(resp)
 
