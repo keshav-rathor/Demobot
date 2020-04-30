@@ -8,9 +8,9 @@ app = Flask(__name__)
 
 # Your Account Sid and Auth Token from twilio.com/console
 # DANGER! This is insecure. See http://twil.io/secure
-account_sid = 'ACbcbbf914aa3b54a0c02fbb423bd51ee9'
-auth_token = 'f2d332b0dfb9684482b437c5a282b16e'
-client = Client(account_sid, auth_token)
+account_sid= 'ACbcbbf914aa3b54a0c02fbb423bd51ee9'
+auth_token= 'f2d332b0dfb9684482b437c5a282b16e'
+client = Client('ACbcbbf914aa3b54a0c02fbb423bd51ee9', 'f2d332b0dfb9684482b437c5a282b16e')
 message = client.messages.create(body='Hi there! We are doing a survey. Can you help us in doing that.',from_='+12195330397',to='+919987680977')
 
 
