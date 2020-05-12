@@ -4,16 +4,10 @@ import traceback
 # import datetime
 from datetime import datetime
 
-import requests
-
-#import db as db
+# import db as db
 from flask import Flask
 from flask import request, make_response
 from pymongo import MongoClient
-
-
-
-
 
 # Connecting to MongoDB database
 
@@ -162,12 +156,6 @@ def process_request(req):
     try:
         result = req.get("queryResult")
         action = result.get("action")
-
-
-
-
-
-
 
 
     except Exception as e:
