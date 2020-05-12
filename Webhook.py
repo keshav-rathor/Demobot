@@ -11,10 +11,12 @@ from pymongo import MongoClient
 
 # Connecting to MongoDB database
 
-MONGODB_URI = "mongodb+srv://kamlesh:techmatters123@aflatoun-quiz-pflgi.mongodb.net/test?retryWrites=true&w=majority"
-client = MongoClient(MONGODB_URI, connectTimeoutMS=30000)
-db = client.Blacklist
-planUS = db.Hr_info
+MONGODB_URI = "mongodb://uptime:Basketball10@134.122.18.134:27017/admin"
+client = MongoClient(MONGODB_URI, connectTimeoutMS=300000)
+db = client.afla_db
+questions = db.questions  # This collection contains all Question-Answer and Explanations
+history = db.history# This collection stores all user chat history
+feed=db.feedback
 
 
 # Flask app should start in global layout
@@ -149,7 +151,7 @@ def process_request(req):
     #req.update({"feedback": feedback})
     # Inserting whole JSON object into databases
     try:
-        planUS.insert(req, check_keys=False)
+        feed.insert(req, check_keys=False)
     except:
         pass
 
