@@ -148,6 +148,7 @@ def process_request(req):
     timestamp = datetime.timestamp(now)
     timestamp1 = int(timestamp * (10 ** 3))
     req.update({"timestamp": timestamp1})
+    req.update({"PlanUSA": 'DataPlanUSA'})
     #req.update({"feedback": feedback})
     # Inserting whole JSON object into databases
     try:
